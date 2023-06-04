@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+main {
+  background: hsl(233, 47%, 7%);
+  width: 100vw;
+  height: 100%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+.stats-preview-card {
+  background: hsl(244, 38%, 16%);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column-reverse;
+  height: fit-content;
+  width: 90%;
+  margin-top: 30px;
+}
+.stats-preview-card article {
+  text-align: center;
+  padding: 40px;
+}
+.preview-card__heading {
+  font-size: 1.3rem;
+  color: hsl(0, 0%, 100%);
+  font-family: "Inter", sans-serif;
+}
+.preview-card__heading span {
+  color: hsl(277, 64%, 61%);
+}
+.preview-card__info {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 0.8rem;
+  margin-top: 12px;
+}
+.preview-card__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+.preview-card__stats .stat-box h3 {
+  color: hsla(0, 0%, 100%);
+  font-family: "Inter", sans-serif;
+}
+.preview-card__stats .stat-box p {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.7rem;
+}
+.team-image {
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+.team-image__overlay {
+  position: absolute;
+  background-color: hsl(277, 64%, 61%, 0.2);
+  width: 100%;
+  height: 100%;
+}
+.team-image img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  object-fit: cover;
+}
+
+#desktop-img {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* --------- TABLET ----- */
+@media (min-width: 768px) {
+  main {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .stats-preview-card {
+    width: 85%;
+    height: fit-content;
+    flex-direction: row;
+  }
+  .stats-preview-card article,
+  .stats-preview-card figure {
+    flex: 1;
+  }
+  .stats-preview-card article {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    text-align: left;
+  }
+
+  .preview-card__heading {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  .preview-card__info {
+    margin-top: 10px;
+    font-size: 1rem;
+    padding-right: 60px;
+  }
+  .preview-card__stats {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: auto;
+    width: 80%;
+  }
+  .stat-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 3px;
+  }
+  .stat-box p {
+    font-size: 0.7rem;
+  }
+  .team-image {
+    width: 50%;
+    height: 400px;
+  }
+
+  .team-image img {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0;
+  }
+  .stats-preview-card {
+  }
+  #desktop-img {
+    display: block;
+  }
+  #mobile-img {
+    display: none;
+  }
+}
+/* -------- LAPTOP SCREENS ------ */
+@media (min-width: 1200px) {
+  .stats-preview-card {
+    width: 80%;
+    max-width: 1024px;
+  }
+  .preview-card__heading {
+    font-size: 2.6rem;
+  }
+  .team-image {
+    height: 350px;
+  }
+}
+@media (min-width: 1440px) {
+  /* .stats-preview-card {
+    width: 80%;
+  } */
+}
