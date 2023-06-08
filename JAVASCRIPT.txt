@@ -1,0 +1,155 @@
+UPDATE:
+
+var officeDatabase=[];
+function addemp(name,email,phone,regId)
+{
+    var emp={
+        name:name,email:email,phone:phone,regId:regId
+    };
+    officeDatabase.push(emp);
+}
+addemp("sreesha","sree@gmail.com","9876543213","REGID001")
+addemp("sreeha","sree@gmail.com","9876543213","REGID002")
+addemp("sithu","sree@gmail.com","9856543213","REGID003")
+addemp("samu","sree@gmail.com","9876578213","REGID004")
+addemp("laddu","sree@gmail.com","9800543213","REGID005")
+addemp("bhavin","sree@gmail.com","9866543213","REGID006")
+function namecheck(emp) {
+  return emp.name === "sreesha";
+}
+console.log(officeDatabase.find(namecheck));
+
+
+          OUTPUT:
+{
+  name: 'sreesha',
+  email: 'sree@gmail.com',
+  phone: '9876543213',
+  regId: 'REGID001'
+}
+ 
+
+
+
+UPPERCASE:
+
+var officeDatabase=[];
+function addemp(name,email,phone,regId,age)
+{
+    var emp={
+        name:name,email:email,phone:phone,regId:regId,age:age
+    };
+    officeDatabase.push(emp);
+}
+addemp("sreesha","sree@gmail.com","9876543213","REGID001","10")
+addemp("sreeha","sree@gmail.com","9876543213","REGID002","11")
+addemp("sithu","sree@gmail.com","9856543213","REGID003","12")
+addemp("samu","sree@gmail.com","9876578213","REGID004","13")
+addemp("laddu","sree@gmail.com","9800543213","REGID005","14")
+addemp("bhavin","sree@gmail.com","9866543213","REGID006","15")
+var upperCaseNames=officeDatabase.map(function(emp)
+{
+    return emp.name.toUpperCase();
+});
+console.log(upperCaseNames);
+
+           OUTPUT:
+[ 'SREESHA', 'SREEHA', 'SITHU', 'SAMU', 'LADDU', 'BHAVIN' ]
+
+
+
+
+STARTSWITH:
+var officeDatabase=[];
+function addemp(name,email,phone,regId,age)
+{
+    var emp={
+        name:name,email:email,phone:phone,regId:regId,age:age
+    };
+    officeDatabase.push(emp);
+}
+addemp("sreesha","sree@gmail.com","9876543213","REGID001","10")
+addemp("sreeha","sree@gmail.com","9876543213","REGID002","11")
+addemp("sithu","sree@gmail.com","9856543213","REGID003","12")
+addemp("samu","sree@gmail.com","9876578213","REGID004","13")
+addemp("laddu","sree@gmail.com","9800543213","REGID005","14")
+addemp("bhavin","sree@gmail.com","9866543213","REGID006","15")
+
+var filteredEmployee=officeDatabase.filter(function(emp)
+{
+    return emp.name.startsWith("b");
+});
+console.log("filtered Employee:");
+console.log(filteredEmployee);
+
+
+        OUTPUT:
+
+filtered Employee:
+[
+  {
+    name: 'bhavin',
+    email: 'sree@gmail.com',
+    phone: '9866543213',
+    regId: 'REGID006',
+    age: '15'
+  }
+]
+
+
+EMAIL CHECKING:
+var officeDatabase=[];
+function addemp(name,email,phone,regId,age)
+{
+    var emp={
+        name:name,email:email,phone:phone,regId:regId,age:age
+    };
+    officeDatabase.push(emp);
+}
+addemp("sreesha","sree@gmail.com","9876543213","REGID001","10")
+addemp("sreeha","sree@gmail.com","9876543213","REGID002","11")
+addemp("sithu","sree@gmail.com","9856543213","REGID003","12")
+addemp("samu","sree@gmail.com","9876578213","REGID004","13")
+addemp("laddu","sree@gmail.com","9800543213","REGID005","14")
+addemp("bhavin","sree@gmail.com","9866543213","REGID006","15")
+var empmail=officeDatabase.every(function(emp)
+
+{
+    return emp.email!==undefined;
+});
+console.log("All students have mail?" + empmail);
+    
+
+
+      OUTPUT:
+All students have mail?true
+
+
+
+
+      LENGTH FINDING:
+var officeDatabase=[];
+function addemp(name,email,phone,regId,age)
+{
+    var emp={
+        name:name,email:email,phone:phone,regId:regId,age:age
+    };
+    officeDatabase.push(emp);
+}
+addemp("sreesha","sree@gmail.com","9876543213","REGID001","10")
+addemp("sreeha","sree@gmail.com","9876543213","REGID002","11")
+addemp("sithu","sree@gmail.com","9856543213","REGID003","12")
+addemp("samu","prabu@gmail.com","9876578213","REGID004","13")
+addemp("laddu","prabu@gmail.com","9800543213","REGID005","14")
+addemp("bhavin","","9866543213","REGID006","15")
+var totalemp=officeDatabase.reduce(function(length)
+{
+    return length+1;
+},0);
+console.log("Total number of students:"+totalemp);
+
+ 
+         OUTPUT:
+Total number of students:6
+
+
